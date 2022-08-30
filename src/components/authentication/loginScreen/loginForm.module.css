@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+.formContainer {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 200px;
+  flex-direction: column;
+  
+  
+}
+.pageHeading{
+  text-align: center;
+  font-family: 'Silkscreen', cursive;
+  color: navy;
+  font-size: 35px;
+  margin-bottom: 50px;
+
+}
