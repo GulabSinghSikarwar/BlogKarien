@@ -5,100 +5,33 @@ const initialState = {
     user: null,
 
 }
-const callApi= async ()=>{
-    const url = `http://localhost:5000/auth/login`
-
-    const payload = { ...action.payload }
-
-    const body = JSON.stringify(payload)
-    console.log(" login body : ", body);
-
-    const method = 'POST'
-
-    const headers = {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json; charset=utf-8'
-    }
 
 
-    let result=  await fetch(url, {
-        method,
-        body,
-        headers
-    })
-    
-    let response=result.json();
-    console.log("RESPONSE : -->",response);
-}
+
+
 
 const authSlice = createSlice({
     name: 'authState',
     initialState: initialState,
+   
+   
     reducers: {
         setToken: (state, action) => {
             state.token = action.payload
         },
+
+
         logout: (state, action) => {
             state.token = null
         },
-        login: async (state, action) => {
-            //  login --> fetch  requet for login 
-            // const url = `http://localhost:5000/auth/login`
-
-            // const payload = { ...action.payload }
-
-            // const body = JSON.stringify(payload)
-            // console.log(" login body : ", body);
-
-            // const method = 'POST'
-
-            // const headers = {
-            //     'Accept': 'application/json',
-            //     'Content-Type': 'application/json; charset=utf-8'
-            // }
-
-            // fetch(url, {
-            //     method,
-            //     body,
-            //     headers
-            // }).then((result) => {
-            //     return result.json()
-            // }).then((user) => {
-
-            //     // update user state 
-            //     // console.log (" RESPONSE -->",user);
-            //     // console.log (" USER DATA  -->",user.user);
-            //     const newUser = JSON.pasre(user.user)
-            //     console.log("NEW USER --> ",newUser);
-            //     state.user = user;
-            let result=  await fetch(url, {
-                    method,
-                    body,
-                    headers
-                })
-                
-                let response=result.json();
-                console.log("RESPONSE : -->",response);
-
-
-
-            // }).catch((e) => {
-            //     console.log(e);
-            // })
-            /**
-             * 
-             * payload= {
-             * userInput :{
-             * email :entered email 
-             * password  : entered password 
-             * }
-             * 
-             * call fetch request 
-             * get user personel info and update user state  
-             * }
-             */
-
-            // user state--> updation of  user state 
+        
+        
+        login:   (state, action) => {
+          
+          const response={...action.payload}
+      state.user={...response.user}
+     
+            
 
 
 
