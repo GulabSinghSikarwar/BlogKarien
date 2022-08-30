@@ -5,20 +5,11 @@ import NavbarComponent from './navbar/NavbarComponent'
 import { useSelector, useDispatch } from 'react-redux'
 
 function Components() {
-  let userData=useSelector((state) => {
+  let user=useSelector((state) => {
     return state.authSlice.user
     
   })
-  const [ user,setUser ]=useState(userData)
-  // useEffect(()=>{
 
-   
-    
-  
-
-  // },[])
-
-  // const user = 
 
   return (
     <div>
