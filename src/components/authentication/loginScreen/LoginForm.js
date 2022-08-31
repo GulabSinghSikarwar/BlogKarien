@@ -43,14 +43,17 @@ function LoginForm() {
 
         const headers = {
             'Accept': 'application/json',
-            'Content-Type': 'application/json; charset=utf-8'
+            'Content-Type': 'application/json; charset=utf-8',
+           
+            
         }
 
 
         let result = await fetch(url, {
             method,
             body,
-            headers
+            headers,  credentials: 'include'
+           
         })
 
         let response = await result.json();
