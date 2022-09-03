@@ -18,6 +18,9 @@ function Components() {
       
       <Routes>
      <Route path="/" element={(!user)?<AuthenticationContainer/>:<NavbarComponent/>}/> 
+     <Route path='/login' element={<LoginFormContainer/>}/>
+     <Route path='/signup' element={<SignUpFormContainer/>}/>
+     
       </Routes>
       
 
