@@ -1,19 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 
 .formContainer {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 200px;
-  flex-direction: column;
-  
+display: flex;
+flex-direction: column; 
+text-align: center;
   
 }
-.pageHeading{
+.mainFormContainer{
+ 
+}
+form{
+
+max-width: 500px;
+justify-content: center;
+padding-left: 0px;
+padding-right: 0px;
+  
+}
+.formContainer form{
+  text-align: center;
+}
+/* .pageHeading{
   text-align: center;
   font-family: 'Silkscreen', cursive;
   color: navy;
   font-size: 35px;
   margin-bottom: 50px;
+  text-align: center;
+  justify-content: center;
 
-}
+} */
+/* .formControlGroup{
+  text-align: center;
+  max-width: 400px;
+} */

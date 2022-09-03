@@ -34,7 +34,7 @@ function SignUpForm() {
 
     
     const submitForm=( event )=>{
-        alert(" LOGIN submit is called ")
+        alert(" Sign up submit is called ")
         event.preventDefault ();
 
 

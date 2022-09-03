@@ -44,16 +44,16 @@ function LoginForm() {
         const headers = {
             'Accept': 'application/json',
             'Content-Type': 'application/json; charset=utf-8',
-           
-            
+
+
         }
 
 
         let result = await fetch(url, {
             method,
             body,
-            headers,  credentials: 'include'
-           
+            headers, credentials: 'include'
+
         })
 
         let response = await result.json();
@@ -71,7 +71,7 @@ function LoginForm() {
         callApiLogin(user).then((response) => {
             dispatch(login(response))
 
-        }).catch((e)=>{
+        }).catch((e) => {
             console.log(e);
         })
 
@@ -87,23 +87,38 @@ function LoginForm() {
                 </h3>
             </div>
 
-            <form class="row g-3" onSubmit={submitForm}>
-                <div class="col-auto">
-                    <label for="staticEmail2" class="visually-hidden">Email</label>
-                    <input onChange={emailChangeHandeler}
-                        placeholder="E-mail"
-                        type="text" class="form-control-plaintext" id="staticEmail2"
-                    />
-                </div>
-                <div class="col-auto">
-                    <label for="inputPassword2" class="visually-hidden">Password</label>
-                    <input onChange={passwordChangeHandeler} type="password"
-                        class="form-control" id="inputPassword2" placeholder="Password" />
-                </div>
-                <div class="col-auto">
-                    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-                </div>
-            </form>
+            <div className={styles.mainFormContainer} >
+                <form class="row g-3" onSubmit={submitForm}>
+
+                    <div className={styles.formControlGroup}>
+
+                        <div class="col-auto">
+                            <label for="staticEmail2" class="visually-hidden">Email</label>
+                            <input onChange={emailChangeHandeler}
+                                placeholder="E-mail"
+                                type="text" class="form-control-plaintext" id="staticEmail2"
+                            />
+                        </div>
+                    </div>
+                    <div className={styles.formControlGroup}>
+
+                        <div class="col-auto">
+                            <label for="inputPassword2" class="visually-hidden">Password</label>
+                            <input onChange={passwordChangeHandeler} type="password"
+                                class="form-control" id="inputPassword2" placeholder="Password" />
+                        </div>
+                    </div>
+                    <div className={styles.formControlGroup}>
+                        <div class="col-auto">
+                            <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+                        </div>
+
+                    </div>
+
+
+
+                </form>
+            </div>
         </div>
     )
 }

@@ -1,0 +1,27 @@
+.buttonOuterContainer{
+    text-align: center;
+    /* justify-content: center; */
+}
+.authButtonContainer{
+    display: flex;
+    flex-direction: column;
+
+
+
+
+    text-align: center;
+        justify-content: center;
+    margin-top: 40vh;
+    margin-left: 0px ;
+    margin-right: 0px;
+    align-items: center;
+    width: fit-content;
+    justify-content:space-between;
+    border: 1px solid  navy;
+    
+    
+}
+.authButtonContainer button {
+    margin-bottom: 30px;
+    
+}
